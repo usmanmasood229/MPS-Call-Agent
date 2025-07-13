@@ -1,0 +1,190 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Lexend', sans-serif; /* Apply Lexend font here */
+  overflow-x: hidden;
+}
+
+/* Background with the provided image */
+.background-wrapper {
+  background-image: url('./images/image-mesh-gradient\ \(1\).png'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Glass-style container */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 30px;
+  padding: 60px 40px;
+  max-width: 900px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  color: #000;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography styling */
+.hero-header h1 {
+  font-size: 5vw;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.hero-header p {
+  font-size: 1.3rem;
+  color: #333;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+/* Sections */
+.description, .usage {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.description h2, .usage h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #111;
+}
+
+.description p, .usage ul li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.usage ul {
+  padding-left: 20px;
+}
+
+.usage li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 41px;
+    margin-left: 190px;
+    margin-bottom: -19px;
+}
+
+/* Voice Widget Floating */
+.voice-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.agent{
+   margin-top: 384px;
+    margin-left: 504px;
+
+      position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+/* =============================
+   📱 RESPONSIVENESS
+   ============================= */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+  .glass-panel {
+    padding: 50px 30px;
+    max-width: 90%;
+  }
+
+  .hero-header h1 {
+    font-size: 6vw;
+  }
+
+  .hero-header p {
+    font-size: 1.1rem;
+  }
+
+  .description h2,
+  .usage h2 {
+    font-size: 1.6rem;
+  }
+
+  .description p,
+  .usage ul li {
+    font-size: 1rem;
+  }
+
+  .footer {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .agent {
+    margin-top: 0;
+    margin-left: 0;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .glass-panel {
+    padding: 35px 20px;
+  }
+
+  .hero-header h1 {
+    font-size: 7vw;
+  }
+
+  .hero-header p {
+    font-size: 1rem;
+  }
+
+  .description h2,
+  .usage h2 {
+    font-size: 1.4rem;
+  }
+
+  .description p,
+  .usage ul li {
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+
+  .agent {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    margin: 0;
+  }
+}
